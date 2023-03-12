@@ -20,12 +20,22 @@
   color: var(--bg-color);
 }
 
-html, body {
-  height: 100%;
+html {
+  position: relative;
+  height: 100vh;
+  min-height: 100vh;
   background-color: var(--bg-color);
   color: var(--fg-color);
 
   animation: 5s ease-out 0s stabilize;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.content {
+  padding-bottom: 4ch;
 }
 
 @keyframes stabilize {
@@ -76,8 +86,28 @@ html, body {
   padding-bottom: 1ch;
 }
 
-.scanlines {
+.footer {
   position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--fg-color);
+  color: var(--bg-color);
+  padding: 1px;
+}
+
+.footer li {
+  width: 16ch;
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  padding-left: 1ch;
+  list-style-type: none;
+}
+
+.scanlines {
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -90,5 +120,6 @@ html, body {
     rgba(0, 0, 0, 0.2) 5px
   );
   pointer-events: none;
+  overflow: hidden;
 }
 
