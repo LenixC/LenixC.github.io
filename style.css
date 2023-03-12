@@ -4,6 +4,7 @@
   --bg-color: #161616;
   --fg-color: #65E265;
   --ibm-plex: 'IBM Plex Mono', monospace;
+  --font-size: 16pt;
 }
 
 * {
@@ -32,6 +33,7 @@ html {
 
 body {
   min-height: 100vh;
+  font-size: var(--font-size);
 }
 
 .content {
@@ -62,6 +64,7 @@ body {
 
 .navbar p {
   width: 8ch;
+  height: 1ch;
   background-color: var(--fg-color);
   padding-left: 2px;
 }
@@ -71,6 +74,24 @@ body {
   color: var(--bg-color);
   transition: 0.2s;
 }
+
+@media (max-width: 640px) {
+  .navbar {
+    flex-direction: column;
+    font-size: 20pt;
+    text-align: center;
+  }
+
+  .navbar li {
+    width: 100vw;
+    padding-left: 0;
+  }
+
+  .navbar p {
+    height: 1em;
+  }
+}
+
 
 .centering {
   padding-left: 10%;
