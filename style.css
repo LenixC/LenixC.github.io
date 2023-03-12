@@ -9,10 +9,14 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: monospace;
  
   filter: blur(var(--screen-blur));
   -webkit-filter: blur(var(--screen-blur));
+}
+
+@font-face {
+  font-family: "mononoki";
+  src: url("mononoki-Regular.ttf");
 }
 
 ::selection {
@@ -32,6 +36,7 @@ html {
 
 body {
   min-height: 100vh;
+  font-family: "mononoki";
   font-size: var(--font-size);
 }
 
