@@ -3,7 +3,8 @@ let ready = false;
 
 window.addEventListener('load', function () {
   ready = true;
-  document.getElementById("color_button").innerHTML = colors[localStorage.color][2];
+  document.getElementById("color_button").innerHTML = 
+    colors[localStorage.getItem('color')][2];
 });
 
 const colors = [
@@ -24,7 +25,6 @@ function init() {
     if (localStorage.blur == 0) {
       blur_toggle(true);
     }
-    color_index = localStorage.color;
     change_colors(true);
   }
 }
@@ -41,12 +41,12 @@ function blur_toggle(is_init) {
   root.style.setProperty('--no-blur', no_blur);
   
   if (!is_init) {
-    localStorage.blur = 1 - localStorage.blur;
+    localStorage.setItem('blur', 1-localStorage.blur);
   }
 }
 
 function change_colors(is_init) {
-  let color_index = parseInt(localStorage.color);
+  let color_index = parseInt(localStorage.getItem('color'));
   if (!is_init) {
     color_index = (color_index + 1) % colors.length;
   }
@@ -56,5 +56,5 @@ function change_colors(is_init) {
   if (ready) {
     document.getElementById("color_button").innerHTML = colors[color_index][2];
   }
-  localStorage.color = color_index;
+  localStorage.setItem('color', color_index);
 }
