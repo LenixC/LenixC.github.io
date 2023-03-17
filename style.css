@@ -11,7 +11,7 @@
   padding: 0;
  
   filter: blur(var(--screen-blur));
-  -webkit-filter: blur(var(--screen-blur));
+  -webkit-filter: blur(var(--screen-blur))
 }
 
 @font-face {
@@ -64,6 +64,21 @@ body {
   color: var(--fg-color);
   padding-left: 1ch;
   list-style-type: none;
+}
+
+.navbar li a {
+  color: var(--fg-color);
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: var(--fg-color);
+  color: var(--bg-color);
+  transition: 0.2s;
+}
+
+.navbar #home {
+  margin-right: auto;
 }
 
 .navbar p {
