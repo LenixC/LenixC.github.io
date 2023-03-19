@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "mononoki";
-  src: url("mononoki-Regular.ttf");
+  src: url("fonts/mononoki-Regular.ttf");
 }
 
 ::selection {
@@ -38,6 +38,13 @@ body {
   min-height: 100vh;
   font-family: "mononoki";
   font-size: var(--font-size);
+}
+
+a {
+  background-color: var(--fg-color);
+  color: var(--bg-color);
+  text-decoration: none;
+  display: block;
 }
 
 .content {
@@ -67,6 +74,7 @@ body {
 }
 
 .navbar li a {
+  background-color: var(--bg-color);
   color: var(--fg-color);
   text-decoration: none;
   display: block;
