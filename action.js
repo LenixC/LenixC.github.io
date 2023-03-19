@@ -5,16 +5,14 @@ window.addEventListener('load', function () {
   ready = true;
   document.getElementById("color_button").innerHTML = 
     colors[localStorage.getItem('color')][2];
-  var link = document.querySelector("link[rel~='icon']");
-  link.href = "images/" + colors[localStorage.getItem('color')][3];
 });
 
 const colors = [
-  //Background, Foreground, color, favicon name
-  ["#161616", "#65E265", "Green", "favicon_green.png"],
-  ["#544115" , "#FFB000", "Amber", "favicon_amber.png"],
-  ["#50449B", "#887ECB", "C64", "favicon_c64.png"],
-  ["#1A1A1A", "#D7D7D7", "Grey", "favicon_grey.png"]
+  //Background, Foreground
+  ["#161616", "#65E265", "Green"],
+  ["#544115" , "#FFB000", "Amber"],
+  ["#50449B", "#887ECB", "C64"],
+  ["#1A1A1A", "#D7D7D7", "Grey"]
 ];
 
 init();
@@ -57,9 +55,6 @@ function change_colors(is_init) {
   root.style.setProperty('--fg-color', colors[color_index][1]);
   if (ready) {
     document.getElementById("color_button").innerHTML = colors[color_index][2];
-    var link = document.querySelector("link[rel~='icon']");
-    link.href = "images/" + colors[color_index][3];
   }
-
   localStorage.setItem('color', color_index);
 }
