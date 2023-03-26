@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- ANSI/ASCII Fonts: https://patorjk.com/software/taag/ -->
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="Lenix Carter's Portfolio Website" name="description"/>
+  <meta content="" name="keywords"/>
+  <meta content="Lenix Carter" name="author"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="../style.css" rel="stylesheet"/>
+  <script src="action.js">
+  </script>
+  <title>
+   Lenix Carter
+  </title>
+  <link href="images/favicon_green.png" rel="icon" type="image/x-icon"/>
+ </head>
+ <body>
+  <div class="content">
+   <ul aria-label="Navigation Bar" class="navbar">
+    <li id="home">
+     <a href="../index.html">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="https://github.com/LenixC/">
+      GitHub
+     </a>
+    </li>
+    <li class="active">
+     <a href="../blog.html">
+      Blog
+     </a>
+    </li>
+    <p>
+    </p>
+    <li onclick="blur_toggle(false)">
+     Blur?
+    </li>
+    <li id="color_button" onclick="change_colors(false)">
+     Green
+    </li>
+   </ul>
+   <div class="centering" id="blogpost">
+    <!-- Content goes here -->
+    <h2 class="title text">
+     Motivating my Static Blog Generation
+    </h2>
+    <p class="date text">
+     03/25/2023
+    </p>
+    <p class="blogtext text">
+     <p class="text">
+  This blog has been statically generated from a python script using Beautiful Soup.
+  If you know about the ecosystem related to blogging, you might wonder why I would
+  build my own solution to a problem solved ad infinitum. 
+  </p>
+<p class="text">
+  I'm sure that had I really cared to, I could have looked for the blog platform that
+  most perfectly suited my interests. I am familiar with other blogging platforms.
+  I have used Jekyll before. However, my core goal was to build something with as
+  little bloat, as little drag as possible. It was important to me, that when I would
+  write something for this blog, I felt no resistance. I am a huge proponent of 
+  software that once you are familiar with it, it steps out of your way. I use vim,
+  more accurately, I use a heavily modified NeoVim on my personal machine and a simpler
+  configuration of pure vim on ssh. I use Manjaro Linux with i3 tiling window manager.
+  </p>
+<p class="text">
+  So, building the blog is simple and configurable. You have a couple of tags that
+  indicate to the script how they should populate the blog page and the list of blog
+  pages. There are only 4 necessary components, the title of the blog, the link the
+  blog list should make, the date posted, and the blog content itself. The content 
+  block is parsed as arbitrary HTML, so that a blog can have any HTML based content 
+  I could want in it.
+  </p>
+<p>
+  However, this current configuration is not designed to be plug-and-played by everyone.
+  If someone wanted, they could use similar HTML techniques to me and do just that, but
+  the idea for me would be for someone else, should they be so inclined, fork the 
+  project and make customizations that work for them, for their workflow. So, should
+  that be you, happy hacking. If you think I've done this in a silly way and you know
+  a much better way to implement it, happier hacking.
+  </p>
+    </p>
+   </div>
+  </div>
+  <!-- End of page content -->
+  <ul class="footer">
+   <li>
+    © Lenix Carter
+   </li>
+  </ul>
+  <div class="scanlines">
+  </div>
+ </body>
+</html>
