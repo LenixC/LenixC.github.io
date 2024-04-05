@@ -166,6 +166,10 @@ a {
   overflow: hidden;
 }
 
+.inline {
+  display: inline-block;
+}
+
 @media (max-width: 767px) {
   .navbar {
     flex-direction: column;
