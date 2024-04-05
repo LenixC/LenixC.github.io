@@ -19,8 +19,8 @@ init();
 
 function init() {
   if (localStorage.length == 0) {
-    localStorage.setItem('blur', 1);   //Blur is on.
-    localStorage.setItem('color', 0);  //Color index in on green.
+    localStorage.setItem('blur', 0);   //Blur is on.
+    localStorage.setItem('color', 1);  //Color index in on green.
   } else {
     if (localStorage.blur == 0) {
       blur_toggle(true);
