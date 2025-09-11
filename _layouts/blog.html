@@ -22,6 +22,14 @@
   <main>
       <div class="spec-box black">
       <div class="spec-tab"> {{ page.title }}</div>
+        {% if page.summary %}
+          <div class="spec-box red">
+          <div class="spec-tab"> Summary </div>
+            <div class="spec-content">
+                {{ page.summary }}
+            </div>
+          </div>
+        {% endif %}
         <div class="spec-content">
             {{ content }}
         </div>
