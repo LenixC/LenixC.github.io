@@ -18,7 +18,7 @@ author: "Lenix Carter"
 </header>
 
 <main>
-  <div class="spec-box black">
+  div class="spec-box black">
     <div class="spec-tab">0. About Me</div>
     <div class="spec-content">
       My name is Lenix. I am a passionate technologist.
