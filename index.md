@@ -137,7 +137,7 @@ author: "Lenix Carter"
     <div class="spec-tab">2. EDUCATION</div>
     <div class="spec-content">
       <p>I studied Mathematics and Computer Science 
-      at Emory University for my Undergraduate Degree in Mathematics 
+      at Emory University for my Undergraduate Degree 
       and am studying for a Master's Degree in Computer Science at the 
       Georgia Institute of Technology.
       Below are some Selected Courses:</p>
@@ -248,8 +248,8 @@ author: "Lenix Carter"
       <div class="spec-content">
         <p>
           As a student at Emory University, I am received a degree in 
-          Computer Science with a focus on building robust systems and 
-          data-driven applications.  
+          Mathematics and Computer Science with a focus on building robust 
+          systems and data-driven applications.  
           My coursework has provided me with a strong foundation in both 
           theoretical concepts and practical programming skills, preparing 
           me to tackle complex challenges across the computing landscape.
