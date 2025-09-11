@@ -80,7 +80,7 @@ body {
     line-height: 24px;
     box-sizing: border-box;
     cursor: pointer;
-    z-index: 1; /* Ensure it stays above the content */
+    z-index: 1;
 }
 
 .spec-tab::before {
@@ -94,26 +94,37 @@ body {
 }
 
 .spec-content {
-    padding: var(--base-spacing);
+    padding: clamp(6px, 2vw, 10px);
     font-size: clamp(16px, 1.5vw, 20px);
     line-height: 1.4;
     font-family: 'Space Grotesk', Helvetica, sans-serif;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.spec-content-dots {
+    display: none;
+    padding: var(--base-spacing);
+    font-size: clamp(16px, 3vw, 20px);
+    line-height: 1.2;
+    font-family: 'Space Grotesk', Helvetica, sans-serif;
+    color: var(--accent-color);
+    cursor: pointer;
+    text-align: center;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.spec-content-dots:hover {
     opacity: 1;
 }
 
 .spec-box.collapsed .spec-content {
-    max-height: 0;
-    opacity: 0;
-    padding: 0; 
+    display: none;
 }
 
-.spec-box.collapsed .spec-content {
-    display: none; 
-}
-
-.spec-box.collapsed .spec-box > .spec-content {
-    display: none; 
+.spec-box.collapsed .spec-content-dots {
+    display: block;
 }
 
 nav {
@@ -172,8 +183,6 @@ nav a:active {
     bottom: -2px;
 }
 
-
-/* Topic Highlights */
 .highlight-list {
     display: flex;
     gap: 16px;
@@ -196,8 +205,6 @@ nav a:active {
     list-style: none;  
 }
 
-
-/* Links */
 a {
     color: #333; 
     text-decoration: none; 
