@@ -105,9 +105,10 @@ body {
 .spec-content-dots {
     display: none;
     padding: var(--base-spacing);
-    font-size: clamp(16px, 3vw, 20px);
+    font-size: clamp(18px, 3vw, 24px);
     line-height: 1.2;
     font-family: 'Space Grotesk', Helvetica, sans-serif;
+    font-weight: bold;
     color: var(--accent-color);
     cursor: pointer;
     text-align: center;

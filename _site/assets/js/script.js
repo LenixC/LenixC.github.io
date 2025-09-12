@@ -13,7 +13,7 @@ function initializeAllSpecBoxes() {
     allSpecBoxes.forEach(specBox => {
         if (!specBox.querySelector('.spec-content-dots')) {
             const dotsElement = createDotsElement(specBox);
-            specBox.appendChild(dotsElement);
+            specBox.prepend(dotsElement);
         }
     });
 }
