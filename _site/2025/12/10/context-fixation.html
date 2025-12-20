@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio and Blog">
+  <meta name="author" content="Lenix Carter">
+  <title>Context Fixation</title>
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <header>
+      <div class="title-container">
+        <div class="title">Lenix Carter</div>
+        <div class="subtitle">Data Nerd</div>
+      </div>
+  </header>
+
+  <main>
+      <div class="spec-box black">
+      <div class="spec-tab"> Context Fixation</div>
+        
+          <div class="spec-box red">
+          <div class="spec-tab"> Summary </div>
+            <div class="spec-content">
+                LLMs can bring their context with them throughout a conversation, but when time comes are they actually letting it go?
+            </div>
+          </div>
+        
+        <div class="spec-content">
+            <h2 id="is-this-just-me">Is this just me?</h2>
+<p>Often, in longer debugging loops, when I am tackling
+several different connected, but distinct problems,
+I find that LLMs have a tendency to repeatedly bring
+up topics from earlier in the context. For instance, in
+situations where I am now writing code for offline
+RL, it will give advice for online simply because I
+have asked an aside or gave a counter-example.</p>
+
+<p>In human conversations, people can pivot easily to
+subtle cues in topic changes, but LLMs seem to 
+really hold on to topics in baffling ways. One of the
+frustrations of this is simply that it has been hard to 
+remember these moments, my notetaking on the phenomenom
+is nil, more this gut feeling of I know that this is
+happening.</p>
+
+<p>I’ve taken to calling this context fixation in
+casual speech, because it feels as though the LLM has
+a piece of information that is being given some kind
+of primacy that is passing down to later portions of
+the conversation, even when that information is not
+useful to the problem.</p>
+
+<h2 id="experimentation">Experimentation</h2>
+<p>I am reluctant to call this experimentation, but 
+“poking at the problem and hoping to see something”
+isn’t a very catchy header.</p>
+
+<p>In this first investigation, I attempt to induce the
+context fixation ChatGPT 4o. I do this by beginning a 
+conversation that is about an edge device, where 
+specs are limited and then later pivot to a much more 
+permissible environment. Then, in a second 
+conversation, I ask direction about the permissible 
+environment.</p>
+
+<p>I then, subjectively, compare the results. My 
+expectation is, if I can induce the context fixation,
+we should expect to see in the first conversation
+the LLM to still be concerned with system requirements.</p>
+
+<h2 id="results">Results</h2>
+<p>The results were not the smoking gun I was hoping for,
+its nothing dramatic, but there is something here, I
+think.</p>
+
+<p>When informed that budget was not an option at all
+consider the tone of these two responses:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Experiment</th>
+      <th>Control</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>no, there’s essentially no benefit to starting with something beefier like m5.large for this workload, even with a bigger budget. It won’t meaningfully improve relevance, latency, or experimentation speed at your current scale — it mostly just burns money and can actually make iteration slower.</td>
+      <td>Ah, got it! If cost isn’t a concern, then yes, you can start with beefier instances like m5.large — but let’s break down the pros and cons so you don’t over-engineer unnecessarily.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The experiment seems to be much more focused on cost
+and budget and seems somewhat dismissive of the idea
+of provisioning more. Notice the emphatic “no” vs the
+explicit “yes” of the control. It seems as though
+the conversational framing of the edge device has
+infiltrated the cloud conversation.</p>
+
+<h2 id="moving-forward">Moving Forward</h2>
+<p>This is, of course, sample size of one. It is also
+not particularly good experimentation. There are a
+lot of variables in how this conversation is being
+handled and even subtle differences in the 
+conversational language could be inducing this mismatch
+in tone and focus.</p>
+
+<p>In pursuit of better understanding the problem, my
+next move is maybe a little absurd, but I’ll try it.
+I’m intent on building an agent who has the job of
+attempting to “trick” another LLM into fixating on
+context. This will allow me to generate a ton of 
+examples to be manually investigated, vary parameters
+like conversation length, topic (does this happen more
+in tech?), model, etc.</p>
+
+<p>I’m hoping looking further into this, will allow me 
+quash the idea that this is in my head and not an
+emergent feature of LLMs, and hopefully, try to find
+some prompt or context engineering techniques to 
+mitigate them.</p>
+
+
+        </div>
+      </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Lenix Carter. All rights reserved.</p>
+  </footer>
+
+  <script src="/assets/js/script.js"></script>
+</body>
+</html>
