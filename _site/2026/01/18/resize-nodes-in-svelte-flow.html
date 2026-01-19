@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio and Blog">
+  <meta name="author" content="Lenix Carter">
+  <title>Resizing Nodes in Svelte Flow</title>
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <header>
+      <div class="title-container">
+        <div class="title">Lenix Carter</div>
+        <div class="subtitle">Data Nerd</div>
+      </div>
+  </header>
+
+  <main>
+      <div class="spec-box black">
+      <div class="spec-tab"> Resizing Nodes in Svelte Flow</div>
+        
+          <div class="spec-box red">
+          <div class="spec-tab"> Summary </div>
+            <div class="spec-content">
+                Maybe I failed to RTFM, but this was a pain
+            </div>
+          </div>
+        
+        <div class="spec-content">
+            <h2 id="manual-resizing-of-nodes-in-svelte-flow">Manual Resizing of Nodes in Svelte Flow</h2>
+<p>I was building something in Svelte Flow recently that involved using HTML/CSS 
+to resize a node to a fixed size. This was very easy, except I ran into an issue
+with the sink and source handles no longer cleanly aligning.</p>
+
+<p>To fix this, what you are supposed to do is manually set the width/height on the
+node object directly. If you pass it as a string (i.e via ‘styles’) it fails and 
+the nodes just hang out wherever it was before. If you try to do it in the node 
+directly, it does the same thing. This is what I ended up doing, if you ran into this, hope it helps.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">function</span> <span class="nf">handleToggleExpand</span><span class="p">(</span><span class="nx">nodeId</span><span class="p">,</span> <span class="nx">isExpanded</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">nodes</span> <span class="o">=</span> <span class="nx">nodes</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="nx">node</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">if </span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">id</span> <span class="o">===</span> <span class="nx">nodeId</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if </span><span class="p">(</span><span class="nx">isExpanded</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="p">{</span>
+            <span class="p">...</span><span class="nx">node</span><span class="p">,</span>
+            <span class="na">width</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+            <span class="na">height</span><span class="p">:</span> <span class="mi">300</span>
+          <span class="p">};</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="kd">const</span> <span class="p">{</span> <span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">,</span> <span class="p">...</span><span class="nx">rest</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">node</span><span class="p">;</span>
+          <span class="k">return</span> <span class="nx">rest</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+      <span class="k">return</span> <span class="nx">node</span><span class="p">;</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+
+        </div>
+      </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Lenix Carter. All rights reserved.</p>
+  </footer>
+
+  <script src="/assets/js/script.js"></script>
+</body>
+</html>
