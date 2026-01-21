@@ -21,17 +21,8 @@ author: "Lenix Carter"
   <div class="spec-box black">
     <div class="spec-tab">0. About Me</div>
     <div class="spec-content">
-      My name is Lenix. I am a passionate technologist.
-      I’m a tech professional passionate about building scalable, 
-      impactful systems that solve real-world problems. With a 
-      background in data science and engineering, I thrive in 
-      environments where I can work at the intersection of data and 
-      software development. Whether it's optimizing complex data 
-      pipelines, building machine learning models, or designing robust 
-      system architectures, I’m always focused on delivering high-quality
-      solutions that create value. I’m driven by a desire to improve 
-      processes, tackle tough challenges, and contribute to cutting-edge 
-      projects that push the boundaries of what’s possible.
+      Howdy, I'm Lenix. I do computers. I build machine learning and AI systems, 
+      I optimize pipelines, and I investigate novel systems.
     </div>
   </div>
 
@@ -42,7 +33,40 @@ author: "Lenix Carter"
     </div>
 
     <div class="spec-box red">
-      <div class="spec-tab">1a. Sentiment Analysis API</div>
+      <div class="spec-tab">1a. Semantic Code Diff Analyzer</div>
+      <div class="spec-content">
+        <p>
+          An LLM-powered agentic testing framework that identifies semantic differences 
+          between functionally similar code snippets through adversarial test generation 
+          and execution. Built on LangGraph, the tool implements a stateful directed graph 
+          where two agents work adversarially - one generating targeted test cases based on 
+          semantic analysis, the other evaluating coverage gaps and challenging assumptions. 
+          The agents iterate until reaching high confidence that all behavioral differences 
+          have been identified. Unlike traditional diff tools that compare syntax, this 
+          approach detects behavioral differences by executing both code versions in isolated 
+          subprocesses and producing confidence-scored semantic diff reports along with 
+          reusable test cases.
+        </p>
+        
+        <a href="/2025/12/18/semantic-diff.html">
+          Read my article about building an adversarial AI testing framework.
+        </a>
+    
+        <ul class="highlight-list">
+          <li class="highlight-item">Python</li>
+          <li class="highlight-item">LangGraph</li>
+          <li class="highlight-item">Gemini</li>
+          <li class="highlight-item">LLMs</li>
+          <li class="highlight-item">Agentic AI</li>
+          <li class="highlight-item">Testing</li>
+          <li class="highlight-item">Code Analysis</li>
+          <li class="highlight-item">State Management</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="spec-box red">
+      <div class="spec-tab">1b. Sentiment Analysis API</div>
       <div class="spec-content">
         <p>
           This project is a production-ready sentiment analysis API built with FastAPI,
@@ -75,7 +99,7 @@ author: "Lenix Carter"
     </div>
 
     <div class="spec-box red">
-      <div class="spec-tab">1b. Daylio Analysis</div>
+      <div class="spec-tab">1c. Daylio Analysis</div>
       <div class="spec-content">
         <p>
           This project allows users of the popular mood tracking app
@@ -99,35 +123,6 @@ author: "Lenix Carter"
           <li class="highlight-item">mlxtend</li>
           <li class="highlight-item">scipy</li>
           <li class="highlight-item">plotly</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="spec-box red">
-      <div class="spec-tab">1c. Power Consumption Prediction</div>
-      <div class="spec-content">
-        <p>
-          I developed a predictive model to forecast power output for various energy types 
-          in California using EIA data ingested on an hourly cadence. I applied advanced 
-          time-series forecasting techniques, including SARIMA, Prophet, and harmonic 
-          modeling, where multiple sine functions were stacked to capture cyclical patterns 
-          in energy production. The model was retrained using a rolling window approach, 
-          where only the most recent data was used for training, ensuring the model adapted 
-          to changing trends and seasonal fluctuations. I also implemented an automated 
-          pipeline for weekly retraining, enabling the model to continuously update and 
-          maintain high forecast accuracy.
-        </p>
-
-        <ul class="highlight-list">
-          <li class="highlight-item">Python</li>
-          <li class="highlight-item">APIs</li>
-          <li class="highlight-item">Time-Series</li>
-          <li class="highlight-item">Forecasting</li>
-          <li class="highlight-item">SARIMA</li>
-          <li class="highlight-item">Prophet</li>
-          <li class="highlight-item">Optimization</li>
-          <li class="highlight-item">SciPy</li>
-          <li class="highlight-item">Streamlit</li>
         </ul>
       </div>
     </div>

@@ -91,4 +91,4 @@ is encouraged on this idea (especially for the
 author). Additionally, the technique for testing is a
 bit naive, only handling single-function snippets,
 potentially brittle subprocess isolation, and
-confidence scoring is perhap a bit arbitrary.
+confidence scoring is perhaps a bit arbitrary.
