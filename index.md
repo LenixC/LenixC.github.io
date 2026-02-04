@@ -22,7 +22,7 @@ author: "Lenix Carter"
     <div class="spec-tab">0. About Me</div>
     <div class="spec-content">
       Howdy, I'm Lenix. I do computers. I build machine learning and AI systems, 
-      I optimize pipelines, and I investigate novel systems.
+      I optimize pipelines, and I investigate novel architectures.
     </div>
   </div>
 
